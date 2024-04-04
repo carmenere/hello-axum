@@ -1,1 +1,0 @@
-ENVS = RUST_LOG='actix=debug,actix_web=debug,example_api_sqlx=debug,sqlx=debug' PG_HOST='localhost' PG_PORT='5432' PG_DB='example_api_db' PG_USER='example_api_user' PG_PASSWORD='12345'

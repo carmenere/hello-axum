@@ -3,7 +3,7 @@ SELF := $(realpath $(lastword $(MAKEFILE_LIST)))
 SELFDIR := $(realpath $(dir $(SELF)))
 WORKSPACE := $(realpath $(SELFDIR)/..)
 
-APP ?= hello-axum
+APP ?= hello_axum
 BIN_PATH ?= $(WORKSPACE)/target/aarch64-apple-darwin/debug/$(APP)
 LOG_FILE ?= $(SELFDIR)/.artefacts/.logs/$(APP)
 PID_FILE ?= $(SELFDIR)/.artefacts/.pid/$(APP)
@@ -12,13 +12,13 @@ MODE ?= shell
 
 HOST ?= localhost
 PORT ?= 5432
-USER_DB ?= example_api_db
-USER_NAME ?= example_api_user
+USER_DB ?= hello_axum_db
+USER_NAME ?= hello_axum_user
 USER_PASSWORD ?= 12345
 
 MIGRATIONS = migrations
 SEVERITY = debug
-RUST_LOG = actix=$(SEVERITY),actix_web=$(SEVERITY),example_api_sqlx=$(SEVERITY),sqlx=$(SEVERITY)
+RUST_LOG = axum=$(SEVERITY),actix_web=$(SEVERITY),example_api_sqlx=$(SEVERITY),sqlx=$(SEVERITY)
 
 # ENVS
 ENVS ?= \

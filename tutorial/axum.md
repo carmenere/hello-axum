@@ -87,7 +87,7 @@ The **Tokio stack** includes:
 tokio = {version = "1.37.0", features = [ "full"] }
 tower = {version = "0.4.13", features = [ "full"] }
 hyper = {version = "1.2.0", features = [ "full"] }
-tonic = {version = "0.11.0", features = [ "full"] }
+tonic = {version = "0.11.0" }
 ```
 
 <br>
@@ -126,7 +126,7 @@ async fn process(socket: tokio::net::TcpStream) {
 **Tower** provides a **core** abstraction, [Service](https://docs.rs/tower/latest/tower/trait.Service.html) trait, and **additional** abstraction, [Layer](https://docs.rs/tower/latest/tower/trait.Layer.html) trait and the [ServiceBuilder](https://docs.rs/tower/latest/tower/struct.ServiceBuilder.html) type:
 - A `Service` can be thought of as an **asynchronous function** from a `Request` type to a `Result<Response, Error>` type:
 ```rust
-async fn(Request) -> Result<Response, Error>
+async fn abc(Request) -> Result<Response, Error>
 ```
 - A `Layer` is a function taking a `Service` of **one** type and returning a `Service` of a **different** type.<br>
 - The `ServiceBuilder` type is used to add **middleware to a service** by composing it with multiple `Layer`s. <br>
@@ -492,10 +492,6 @@ If router cannot find appropriate handler to process incoming request it sends `
 The `Router`'s `.fallback()` method allows to register custom **fallback** function that will genereate response for such situations.<br>
 
 ```rust
-# Router fallback
-If 
-
-```rust
 use axum::routing::get;
 
 pub async fn hello() -> String {
@@ -676,6 +672,8 @@ async fn handler(ExtractUserAgent(user_agent): ExtractUserAgent) {
 }
 ```
 
+<br>
+
 # Middleware
 **Middleware** is a function that runs **before** the **handler**.<br>
 `axum` allows add **middleware** anywhere:
@@ -750,7 +748,7 @@ let app = Router::new()
 
 <br>
 
-Here **each new layer wraps all previous layers** and the order of executiong of middlewares is fowwloing:
+Here **each new layer wraps all previous layers** and the order of executing of middlewares is folowing:
 ```
         requests
            |

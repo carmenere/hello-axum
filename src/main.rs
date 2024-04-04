@@ -3,7 +3,7 @@ use tokio;
 use serde::Deserialize;
 use std::sync::Arc;
 
-use mylib::{self, app_state::AppState, handlers as r};
+use hello_axum::{self, app_state::AppState, handlers as r};
 
 #[tokio::main]
 async fn main() {

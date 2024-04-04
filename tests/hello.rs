@@ -8,6 +8,8 @@ async fn get_version() -> Result<(), Box<dyn Error>> {
 
     r.print().await?;
 
-    if r.status() != StatusCode::OK {Err("Http status != 200 Ok".into())}
+    let r = r.status();
+
+    if r != StatusCode::OK {Err("Http status != 200 Ok".into())}
     else {Ok(())}
 }

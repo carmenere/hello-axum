@@ -11,8 +11,8 @@ MODE ?= shell
 
 HOST ?= localhost
 PORT ?= 5432
-USER_DB ?= example_api_db
-USER_NAME ?= example_api_user
+USER_DB ?= hello_axum_db
+USER_NAME ?= hello_axum_user
 USER_PASSWORD ?= 12345
 
 MIGRATIONS = migrations

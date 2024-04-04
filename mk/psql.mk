@@ -11,8 +11,8 @@ EXIT_IF_USER_EXISTS = no
 HOST ?= localhost
 PORT ?= 5432
 USER_ATTRIBUTES ?= SUPERUSER CREATEDB
-USER_DB ?= example_api_db
-USER_NAME ?= example_api_user
+USER_DB ?= hello_axum_db
+USER_NAME ?= hello_axum_user
 USER_PASSWORD ?= 12345
 PG_DUMP ?= /tmp/.dumps/$(USER_DB).sql
 

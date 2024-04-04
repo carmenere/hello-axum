@@ -1,0 +1,42 @@
+{
+    "json.schemaDownload.enable": false,
+    "workbench.colorTheme": "Default Light+",
+    "editor.minimap.enabled": false,
+    "editor.rulers": [
+        120
+    ],
+    /* ${workspaceFolder} - the path of the folder opened in VS Code. */
+    "workbench.editor.enablePreview": false,
+    /* ${workspaceFolder} - the path of the folder opened in VS Code. */
+    "extensions.ignoreRecommendations": true,
+    "[automake]": {
+        "editor.insertSpaces": false,
+        "editor.tabSize": 4
+    },
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "files.autoSave": "afterDelay",
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.env.osx": {
+
+    },
+    "explorer.confirmDelete": false,
+    "[json]": {
+
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace"
+    },
+    "rust-analyzer.linkedProjects": [
+        "Cargo.toml"
+    ],
+    "rust-analyzer.cargo.extraEnv": {
+        "CARGO_TARGET_DIR": "/tmp/target",
+        "BUILD_VERSION": "0.0.0",
+        "DATABASE_URL": "postgres://hello_axum_user:12345@localhost:5432/hello_axum_db"
+    },
+    "rust-analyzer.cargo.features": "all",
+    "git.ignoreLimitWarning": true,
+    "git.openRepositoryInParentFolders": "always",
+}

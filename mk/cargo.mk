@@ -16,8 +16,8 @@ INSTALL_DIR ?= /usr/local/bin
 
 HOST ?= localhost
 PORT ?= 5432
-USER_DB ?= example_api_db
-USER_NAME ?= example_api_user
+USER_DB ?= hello_axum_db
+USER_NAME ?= hello_axum_user
 USER_PASSWORD ?= 12345
 
 # Use 'abspath' instead 'realpath' because TARGET_DIR is not exists, but 'realpath' checks its existance
@@ -72,7 +72,7 @@ USER_NAME ?= example_api_user
 USER_PASSWORD ?= 12345
 
 SEVERITY = debug
-RUST_LOG = actix=$(SEVERITY),actix_web=$(SEVERITY),example_api_sqlx=$(SEVERITY),sqlx=$(SEVERITY)
+RUST_LOG = sqlx=$(SEVERITY)
 
 # ENVS
 ENVS ?= \
