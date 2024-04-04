@@ -3,7 +3,7 @@ SELF := $(realpath $(lastword $(MAKEFILE_LIST)))
 SELFDIR := $(realpath $(dir $(SELF)))
 WORKSPACE := $(realpath $(SELFDIR)/..)
 
-APP ?= hello_axum
+APP ?= hello-axum
 BIN_PATH ?= $(WORKSPACE)/target/aarch64-apple-darwin/debug/$(APP)
 LOG_FILE ?= $(SELFDIR)/.artefacts/.logs/$(APP)
 PID_FILE ?= $(SELFDIR)/.artefacts/.pid/$(APP)
